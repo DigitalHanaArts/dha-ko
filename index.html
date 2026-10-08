@@ -1,0 +1,3131 @@
+<!DOCTYPE html>
+
+<html lang="ko-KP">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="하나예술® — 예술, 자료, 인공지능, 련쇄의 교차점에서 펼쳐지는 계산창조력. 조선화 미학으로 빚은 후후현대적 추상표현."
+    >
+
+    <meta
+        name="theme-color"
+        content="#0a0806"
+    >
+
+    <meta
+        property="og:title"
+        content="하나예술® — 추상엔진"
+    >
+
+    <meta
+        property="og:description"
+        content="예술 × 자료 × 지능 × 련쇄 × 추상"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:image"
+        content="assets/DHA_logo.png"
+    >
+
+    <title>
+        하나예술® — [추상엔진]
+    </title>
+
+
+    <!-- =====================================================
+         글꼴 · FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Song+Myung&family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Nanum+Myeongjo:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           하나예술 — 추상의정 · 조선화판
+           DHA — ABSTRACT PROTOCOL · CHOSŎN-HWA EDITION
+        ====================================================== */
+
+        :root {
+
+            /* 먹 — ink */
+            --먹: #0a0806;
+            --먹-2: #13100b;
+            --먹-3: #1d1913;
+
+            /* 종이 — paper */
+            --백: #ece3d0;
+            --백-2: #c4b89e;
+            --회: #867e6e;
+            --진: #47423a;
+
+            /* 단청 오방 — dancheong five colours */
+            --적: #b8261f;       /* 赤 · 朱 */
+            --적-2: #7d1913;
+            --청: #1a3a6b;       /* 靑 · 藍 */
+            --황: #c9a227;       /* 黃 · 金 */
+            --청자: #6b9b8a;     /* 靑瓷 · celadon */
+
+            --선: rgba(236,227,208,.22);
+            --선-약: rgba(236,227,208,.07);
+
+            --최대: 1400px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+            background: var(--먹);
+        }
+
+
+        body {
+
+            background: var(--먹);
+
+            color: var(--백);
+
+            font-family:
+                "Noto Sans KR",
+                "Nanum Gothic",
+                system-ui,
+                sans-serif;
+
+            overflow-x: hidden;
+
+            cursor: crosshair;
+
+            position: relative;
+
+            line-height: 1.8;
+
+        }
+
+
+        ::selection {
+            background: var(--적);
+            color: var(--백);
+        }
+
+
+        /* =====================================================
+           한지결 — HANJI PAPER TEXTURE
+        ====================================================== */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            z-index: 9997;
+
+            opacity: .05;
+
+            background-image:
+
+                repeating-conic-gradient(
+                    from 0deg,
+                    rgba(236,227,208,.12) 0deg,
+                    rgba(0,0,0,.10) 1deg,
+                    rgba(236,227,208,.06) 2deg,
+                    rgba(0,0,0,.06) 3deg
+                );
+
+            mix-blend-mode: overlay;
+
+        }
+
+
+        body::after {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            z-index: 9996;
+
+            background:
+
+                repeating-linear-gradient(
+                    0deg,
+                    transparent 0px,
+                    transparent 2px,
+                    rgba(236,227,208,.016) 3px,
+                    transparent 4px
+                ),
+
+                radial-gradient(
+                    ellipse at 15% 10%,
+                    rgba(184,38,31,.06),
+                    transparent 45%
+                ),
+
+                radial-gradient(
+                    ellipse at 85% 75%,
+                    rgba(26,58,107,.06),
+                    transparent 45%
+                );
+
+            mix-blend-mode: screen;
+
+        }
+
+
+        /* =====================================================
+           동작 · KEYFRAMES
+        ====================================================== */
+
+        @keyframes 먹번짐 {   /* ink bloom */
+
+            0% {
+                transform: translate(0, 0);
+                clip-path: inset(0 0 0 0);
+            }
+            6% {
+                transform: translate(-2px, 2px);
+                clip-path: inset(12% 0 76% 0);
+            }
+            12% {
+                transform: translate(3px, -1px);
+                clip-path: inset(42% 0 38% 0);
+            }
+            18% {
+                transform: translate(-1px, -3px);
+                clip-path: inset(68% 0 12% 0);
+            }
+            24% {
+                transform: translate(0, 0);
+                clip-path: inset(0 0 0 0);
+            }
+            100% {
+                transform: translate(0, 0);
+                clip-path: inset(0 0 0 0);
+            }
+
+        }
+
+
+        @keyframes 붓자욱 {   /* brush stroke clip */
+
+            0%, 100% { clip-path: inset(0 0 0 0); }
+            10% { clip-path: inset(22% 0 58% 0); }
+            20% { clip-path: inset(78% 0 12% 0); }
+            30% { clip-path: inset(38% 0 32% 0); }
+            40% { clip-path: inset(8% 0 88% 0); }
+            50% { clip-path: inset(0 0 0 0); }
+
+        }
+
+
+        @keyframes 주사 {
+
+            0% { top: -100%; }
+            100% { top: 200%; }
+
+        }
+
+
+        @keyframes 맥박 {
+
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+
+        }
+
+
+        @keyframes 회전느림 {
+
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+
+        }
+
+
+        @keyframes 카드번짐 {   /* mass-games card flip */
+
+            0%, 100% { opacity: .38; }
+            50% { opacity: .85; }
+
+        }
+
+
+        @keyframes 물결 {
+
+            0% { background-position: 0 0; }
+            100% { background-position: 64px 64px; }
+
+        }
+
+
+        /* =====================================================
+           주사선 · SCANLINE
+        ====================================================== */
+
+        .주사선 {
+
+            position: fixed;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 1px;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--적),
+                var(--황),
+                transparent
+            );
+
+            opacity: .16;
+
+            pointer-events: none;
+
+            z-index: 9000;
+
+            animation: 주사 11s linear infinite;
+
+        }
+
+
+        /* =====================================================
+           단청 띠 — DAN-CHEONG BORDER BAND
+        ====================================================== */
+
+        .단청 {
+
+            height: 14px;
+
+            width: 100%;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--적) 25%, transparent 25%) 0 0 / 16px 16px,
+
+                linear-gradient(225deg,
+                    var(--적) 25%, transparent 25%) 0 0 / 16px 16px,
+
+                linear-gradient(315deg,
+                    var(--청) 25%, transparent 25%) 0 0 / 16px 16px,
+
+                linear-gradient(45deg,
+                    var(--청) 25%, transparent 25%) 0 0 / 16px 16px,
+
+                var(--황);
+
+            opacity: .85;
+
+        }
+
+
+        .단청-가는 {
+
+            height: 6px;
+
+            width: 100%;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    var(--적) 0 10px,
+                    transparent 10px 16px,
+                    var(--황) 16px 22px,
+                    transparent 22px 28px,
+                    var(--청) 28px 38px,
+                    transparent 38px 44px
+                );
+
+            opacity: .55;
+
+        }
+
+
+        /* =====================================================
+           네비 · NAVIGATION
+        ====================================================== */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background: rgba(10,8,6,.88);
+
+            border-bottom: 1px solid var(--선);
+
+            backdrop-filter: blur(20px);
+
+            -webkit-backdrop-filter: blur(20px);
+
+            padding: 0 clamp(16px, 4vw, 60px);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            height: 66px;
+
+        }
+
+
+        nav::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -4px;
+
+            width: 100%;
+            height: 4px;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    var(--적) 0 8px,
+                    transparent 8px 12px,
+                    var(--황) 12px 18px,
+                    transparent 18px 22px,
+                    var(--청) 22px 30px,
+                    transparent 30px 34px
+                );
+
+            opacity: .6;
+
+        }
+
+
+        .nav-브랜드 {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            font-family: "Black Han Sans", "Song Myung", serif;
+
+            font-weight: 400;
+
+            font-size: 16px;
+
+            letter-spacing: .18em;
+
+            color: var(--백);
+
+            text-decoration: none;
+
+        }
+
+
+        .nav-로고 {
+
+            width: 30px;
+            height: 30px;
+
+            object-fit: contain;
+
+            filter: invert(1) sepia(.3) hue-rotate(-15deg) contrast(1.15);
+
+        }
+
+
+        .nav-글자 {
+
+            display: flex;
+
+            gap: 26px;
+
+            align-items: center;
+
+            font-family: "Noto Sans KR", sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: .18em;
+
+            font-weight: 500;
+
+        }
+
+
+        .nav-글자 a {
+
+            color: var(--회);
+
+            text-decoration: none;
+
+            transition: color .2s ease;
+
+            position: relative;
+
+        }
+
+
+        .nav-글자 a::before {
+
+            content: "";
+
+            position: absolute;
+
+            bottom: -5px;
+            left: 0;
+
+            width: 0;
+            height: 1px;
+
+            background: var(--적);
+
+            transition: width .3s ease;
+
+        }
+
+
+        .nav-글자 a:hover {
+            color: var(--백);
+        }
+
+
+        .nav-글자 a:hover::before {
+            width: 100%;
+        }
+
+
+        /* 언어 전환 — LANGUAGE SWITCH */
+
+        .언어 {
+
+            position: relative;
+
+            display: inline-block;
+
+        }
+
+
+        .언어-토글 {
+
+            position: absolute;
+
+            opacity: 0;
+
+            width: 0;
+            height: 0;
+
+        }
+
+
+        .언어-단추 {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            cursor: pointer;
+
+            padding: 8px 14px;
+
+            border: 1px solid var(--선);
+
+            background: transparent;
+
+            font-family: "Noto Sans KR", "DM Mono", monospace;
+
+            font-size: 11px;
+
+            letter-spacing: .14em;
+
+            color: var(--백);
+
+            transition: all .2s ease;
+
+            user-select: none;
+
+        }
+
+
+        .언어-단추:hover {
+
+            background: var(--적);
+
+            color: var(--백);
+
+            border-color: var(--적);
+
+        }
+
+
+        .언어-목록 {
+
+            position: absolute;
+
+            top: calc(100% + 8px);
+
+            right: 0;
+
+            min-width: 152px;
+
+            background: var(--먹-2);
+
+            border: 1px solid var(--선);
+
+            padding: 0;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transform: translateY(-4px);
+
+            transition: all .2s ease;
+
+            z-index: 1001;
+
+        }
+
+
+        .언어-항목 {
+
+            display: block;
+
+            padding: 10px 16px;
+
+            font-family: "Noto Sans KR", sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: .12em;
+
+            color: var(--회);
+
+            text-decoration: none;
+
+            transition: all .2s ease;
+
+            border-bottom: 1px solid rgba(236,227,208,.06);
+
+        }
+
+
+        .언어-항목:hover {
+
+            background: var(--먹-3);
+
+            color: var(--황);
+
+        }
+
+
+        .언어-항목.활성 {
+
+            color: var(--백);
+
+            background: var(--적);
+
+        }
+
+
+        .언어-토글:checked ~ .언어-목록,
+        .언어:focus-within .언어-목록 {
+
+            opacity: 1;
+
+            visibility: visible;
+
+            transform: translateY(0);
+
+        }
+
+
+        /* =====================================================
+           첫 화면 · HERO
+        ====================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 110px 0 60px;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .hero-격자 {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+            width: 100%;
+
+        }
+
+
+        .hero-글 {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .hero-표지 {
+
+            font-family: "Noto Sans KR", sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: .38em;
+
+            color: var(--황);
+
+            margin-bottom: 30px;
+
+            display: inline-block;
+
+            border: 1px solid var(--황);
+
+            padding: 8px 18px;
+
+            transform: rotate(-1deg);
+
+            background: rgba(201,162,39,.06);
+
+        }
+
+
+        .hero-글 h1 {
+
+            font-family: "Black Han Sans", "Song Myung", serif;
+
+            font-weight: 400;
+
+            font-size: clamp(3.6rem, 13vw, 10rem);
+
+            line-height: .92;
+
+            letter-spacing: .01em;
+
+            position: relative;
+
+        }
+
+
+        .hero-글 h1 .말 {
+
+            display: block;
+
+            position: relative;
+
+        }
+
+
+        .hero-글 h1 .말-1 {
+
+            color: var(--백);
+
+            text-shadow:
+
+                5px 0 0 var(--적),
+
+                -4px 0 0 var(--청);
+
+            animation: 붓자욱 7s infinite;
+
+        }
+
+
+        .hero-글 h1 .말-2 {
+
+            color: transparent;
+
+            -webkit-text-stroke: 2px var(--적);
+
+            font-style: italic;
+
+            transform: translateX(26px);
+
+            animation: 먹번짐 9s infinite;
+
+        }
+
+
+        .hero-글 h1 .말-3 {
+
+            color: var(--먹);
+
+            background: var(--황);
+
+            padding: 0 16px;
+
+            display: inline-block;
+
+            transform: skewX(-8deg);
+
+            animation: 맥박 5s infinite;
+
+        }
+
+
+        .hero-글 p {
+
+            margin-top: 42px;
+
+            max-width: 620px;
+
+            font-size: 15px;
+
+            line-height: 2;
+
+            color: var(--회);
+
+            border-left: 3px solid var(--적);
+
+            padding-left: 22px;
+
+        }
+
+
+        .hero-글 p strong {
+
+            color: var(--백);
+
+            font-weight: 700;
+
+            border-bottom: 2px solid var(--황);
+
+        }
+
+
+        .hero-단추들 {
+
+            display: flex;
+
+            gap: 16px;
+
+            margin-top: 42px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .단추 {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 14px 30px;
+
+            font-family: "Noto Sans KR", sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 500;
+
+            letter-spacing: .2em;
+
+            text-decoration: none;
+
+            border: 1px solid var(--선);
+
+            background: transparent;
+
+            color: var(--백);
+
+            transition: all .25s ease;
+
+            position: relative;
+
+            overflow: hidden;
+
+            z-index: 1;
+
+        }
+
+
+        .단추::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: -100%;
+
+            width: 100%;
+            height: 100%;
+
+            background: var(--적);
+
+            transition: left .25s ease;
+
+            z-index: -1;
+
+        }
+
+
+        .단추:hover::before {
+            left: 0;
+        }
+
+
+        .단추:hover {
+
+            color: var(--백);
+
+            border-color: var(--적);
+
+        }
+
+
+        .단추-으뜸 {
+
+            background: var(--적);
+
+            color: var(--백);
+
+            border-color: var(--적);
+
+        }
+
+
+        .단추-으뜸::before {
+            background: var(--황);
+        }
+
+
+        .단추-으뜸:hover {
+            color: var(--먹);
+            border-color: var(--황);
+        }
+
+
+        /* 첫 화면 시각 — 圖案 · 조선화 액자 */
+
+        .hero-그림 {
+
+            position: relative;
+
+            min-height: 620px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .그림-액자 {
+
+            position: relative;
+
+            width: min(100%, 520px);
+
+            aspect-ratio: 1;
+
+            background: var(--먹-2);
+
+            border: 2px solid var(--황);
+
+            padding: 18px;
+
+            box-shadow:
+
+                0 0 0 6px var(--먹),
+
+                0 0 0 7px var(--선),
+
+                0 30px 90px rgba(184,38,31,.18);
+
+        }
+
+
+        .그림-액자::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 6px;
+
+            border: 1px solid var(--적);
+
+            pointer-events: none;
+
+            z-index: 4;
+
+        }
+
+
+        .그림-액자::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 12px;
+
+            border: 1px solid rgba(201,162,39,.4);
+
+            pointer-events: none;
+
+            z-index: 4;
+
+        }
+
+
+        /* 아리랑 집단체조 카드판 */
+
+        .카드판 {
+
+            position: absolute;
+
+            inset: 18px;
+
+            background:
+
+                conic-gradient(
+                    var(--적) 0deg 90deg,
+                    var(--먹-3) 90deg 180deg,
+                    var(--청) 180deg 270deg,
+                    var(--먹-3) 270deg 360deg
+                );
+
+            background-size: 32px 32px;
+
+            opacity: .42;
+
+            animation:
+
+                카드번짐 6s ease-in-out infinite,
+                물결 40s linear infinite;
+
+            z-index: 1;
+
+        }
+
+
+        /* 큰 글자 — 꽃 */
+
+        .그림-글자 {
+
+            position: absolute;
+
+            inset: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            font-family: "Black Han Sans", serif;
+
+            font-size: clamp(9rem, 22vw, 17rem);
+
+            color: var(--적);
+
+            text-shadow:
+
+                6px 6px 0 var(--황),
+
+                -3px -3px 0 var(--청),
+
+                0 0 60px rgba(184,38,31,.5);
+
+            z-index: 3;
+
+            animation: 맥박 7s infinite;
+
+            line-height: 1;
+
+        }
+
+
+        .그림-표제 {
+
+            position: absolute;
+
+            bottom: -46px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            font-family: "DM Mono", monospace;
+
+            font-size: 10px;
+
+            letter-spacing: .42em;
+
+            color: var(--회);
+
+            text-transform: uppercase;
+
+            white-space: nowrap;
+
+            z-index: 5;
+
+        }
+
+
+        /* =====================================================
+           두루마리 띠 · MARQUEE
+        ====================================================== */
+
+        .두루마리 {
+
+            border-top: 1px solid var(--선);
+
+            border-bottom: 1px solid var(--선);
+
+            padding: 20px 0;
+
+            overflow: hidden;
+
+            background: var(--먹-2);
+
+            position: relative;
+
+        }
+
+
+        .두루마리::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    transparent 0px,
+                    transparent 62px,
+                    rgba(201,162,39,.05) 63px,
+                    transparent 64px
+                );
+
+            pointer-events: none;
+
+            z-index: 1;
+
+        }
+
+
+        .두루마리-줄 {
+
+            display: inline-flex;
+
+            gap: 44px;
+
+            animation: marquee 26s linear infinite;
+
+            font-family: "Song Myung", "Noto Sans KR", serif;
+
+            font-size: 15px;
+
+            letter-spacing: .24em;
+
+            white-space: nowrap;
+
+        }
+
+
+        .두루마리-줄 span {
+
+            color: var(--회);
+
+            position: relative;
+
+        }
+
+
+        .두루마리-줄 span::before {
+
+            content: "「";
+
+            color: var(--적);
+
+            margin-right: 6px;
+
+        }
+
+
+        .두루마리-줄 span::after {
+
+            content: "」";
+
+            color: var(--적);
+
+            margin-left: 6px;
+
+        }
+
+
+        @keyframes marquee {
+
+            to { transform: translateX(-50%); }
+
+        }
+
+
+        /* =====================================================
+           마디 · SECTIONS
+        ====================================================== */
+
+        section {
+
+            padding: 130px 0;
+
+            position: relative;
+
+            border-bottom: 1px solid var(--선-약);
+
+        }
+
+
+        .그릇 {
+
+            width: min(calc(100% - 40px), var(--최대));
+
+            margin: auto;
+
+            position: relative;
+
+        }
+
+
+        .마디-표지 {
+
+            font-family: "Noto Sans KR", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 500;
+
+            letter-spacing: .4em;
+
+            color: var(--적);
+
+            margin-bottom: 32px;
+
+            display: inline-block;
+
+            transform: rotate(-1deg);
+
+            border-bottom: 2px solid var(--황);
+
+            padding-bottom: 6px;
+
+        }
+
+
+        .마디-제목 {
+
+            font-family: "Black Han Sans", "Song Myung", serif;
+
+            font-size: clamp(2.8rem, 6.5vw, 6.5rem);
+
+            line-height: 1;
+
+            font-weight: 400;
+
+            margin-bottom: 34px;
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .마디-제목 .은은 {
+
+            color: transparent;
+
+            -webkit-text-stroke: 1.5px var(--황);
+
+            font-style: italic;
+
+        }
+
+
+        .마디-제목 .긋기 {
+
+            text-decoration: line-through;
+
+            text-decoration-color: var(--적);
+
+            text-decoration-thickness: 4px;
+
+        }
+
+
+        .마디-머리 {
+
+            font-size: 15px;
+
+            line-height: 2;
+
+            color: var(--회);
+
+            max-width: 720px;
+
+            margin-bottom: 62px;
+
+            border-left: 3px solid var(--황);
+
+            padding-left: 22px;
+
+        }
+
+
+        /* =====================================================
+           사역 · DOMAINS
+        ====================================================== */
+
+        .사역 {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 0;
+
+            border: 1px solid var(--선);
+
+        }
+
+
+        .역 {
+
+            padding: 44px 30px;
+
+            min-height: 320px;
+
+            position: relative;
+
+            border-right: 1px solid var(--선);
+
+            border-bottom: 1px solid var(--선);
+
+            background: var(--먹);
+
+            transition: all .3s ease;
+
+            cursor: crosshair;
+
+        }
+
+
+        .역:nth-child(4n) {
+            border-right: none;
+        }
+
+
+        .역:nth-last-child(-n+4) {
+            border-bottom: none;
+        }
+
+
+        .역:hover {
+
+            background: var(--먹-2);
+
+            transform: translateY(-4px);
+
+            border-color: var(--적);
+
+        }
+
+
+        .역::before {
+
+            content: attr(data-수);
+
+            position: absolute;
+
+            top: 22px;
+            right: 26px;
+
+            font-family: "Black Han Sans", serif;
+
+            font-size: 20px;
+
+            color: var(--적);
+
+            opacity: .75;
+
+        }
+
+
+        .역-부호 {
+
+            font-family: "Song Myung", serif;
+
+            font-size: 54px;
+
+            margin-bottom: 30px;
+
+            color: var(--황);
+
+            opacity: .85;
+
+            animation: 맥박 6s infinite;
+
+            line-height: 1;
+
+        }
+
+
+        .역 h3 {
+
+            font-family: "Song Myung", "Noto Sans KR", serif;
+
+            font-size: 21px;
+
+            font-weight: 700;
+
+            letter-spacing: .15em;
+
+            margin-bottom: 16px;
+
+            color: var(--백);
+
+        }
+
+
+        .역 p {
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            color: var(--회);
+
+        }
+
+
+        /* =====================================================
+           론 · ABOUT
+        ====================================================== */
+
+        .론-격자 {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+        }
+
+
+        .론-그림 {
+
+            min-height: 520px;
+
+            position: relative;
+
+            background: var(--먹-2);
+
+            border: 1px solid var(--선);
+
+            overflow: hidden;
+
+        }
+
+
+        .론-그림::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(
+                    circle at 30% 30%,
+                    rgba(184,38,31,.40),
+                    transparent 45%
+                ),
+
+                radial-gradient(
+                    circle at 75% 65%,
+                    rgba(26,58,107,.40),
+                    transparent 45%
+                ),
+
+                radial-gradient(
+                    circle at 50% 92%,
+                    rgba(201,162,39,.25),
+                    transparent 50%
+                );
+
+            filter: blur(34px);
+
+            animation: 맥박 14s ease-in-out infinite;
+
+        }
+
+
+        .론-그림::after {
+
+            content: "론";
+
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%) rotate(-6deg);
+
+            font-family: "Black Han Sans", serif;
+
+            font-size: clamp(9rem, 20vw, 17rem);
+
+            color: transparent;
+
+            -webkit-text-stroke: 3px var(--적);
+
+            opacity: .6;
+
+            line-height: 1;
+
+        }
+
+
+        .론-글 h2 {
+
+            font-family: "Black Han Sans", "Song Myung", serif;
+
+            font-size: clamp(2.4rem, 5vw, 5rem);
+
+            line-height: 1.05;
+
+            font-weight: 400;
+
+            margin-bottom: 24px;
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .론-글 h2 .뜬금 {
+
+            background: var(--적);
+
+            color: var(--백);
+
+            padding: 0 14px;
+
+            display: inline-block;
+
+            transform: skewX(-4deg);
+
+        }
+
+
+        .론-글 p {
+
+            font-size: 15px;
+
+            line-height: 2;
+
+            color: var(--회);
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .론-글 p strong {
+
+            color: var(--황);
+
+            font-weight: 700;
+
+        }
+
+
+        /* =====================================================
+           작품 · PROJECTS
+        ====================================================== */
+
+        .작품 {
+
+            margin-bottom: 44px;
+
+            border: 1px solid var(--선);
+
+            background: var(--먹-2);
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            position: relative;
+
+            transition: all .3s ease;
+
+        }
+
+
+        .작품:hover {
+
+            border-color: var(--적);
+
+            transform: translateX(-4px);
+
+        }
+
+
+        .작품-그림 {
+
+            min-height: 420px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: var(--먹);
+
+        }
+
+
+        .작품-그림 img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            filter: grayscale(100%) sepia(.3) contrast(1.15);
+
+            transition: all .6s ease;
+
+        }
+
+
+        .작품:hover .작품-그림 img {
+
+            filter: grayscale(0%) sepia(.15) contrast(1.08) hue-rotate(-18deg);
+
+            transform: scale(1.05);
+
+        }
+
+
+        .작품-그림::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                repeating-linear-gradient(
+                    0deg,
+                    transparent 0px,
+                    transparent 4px,
+                    rgba(0,0,0,.35) 5px
+                );
+
+            z-index: 1;
+
+            pointer-events: none;
+
+        }
+
+
+        .작품-설명 {
+
+            padding: clamp(30px, 5vw, 60px);
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            position: relative;
+
+        }
+
+
+        .작품-꼬리표 {
+
+            font-family: "Noto Sans KR", sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: .28em;
+
+            color: var(--황);
+
+            margin-bottom: 22px;
+
+            display: inline-block;
+
+        }
+
+
+        .작품-설명 h3 {
+
+            font-family: "Black Han Sans", "Song Myung", serif;
+
+            font-size: clamp(2.2rem, 4.5vw, 4.5rem);
+
+            line-height: 1;
+
+            font-weight: 400;
+
+            margin-bottom: 22px;
+
+            color: var(--백);
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .작품-설명 p {
+
+            font-size: 14px;
+
+            line-height: 2;
+
+            color: var(--회);
+
+            margin-bottom: 26px;
+
+        }
+
+
+        .기술 {
+
+            display: flex;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 26px;
+
+        }
+
+
+        .기술 span {
+
+            border: 1px solid var(--선);
+
+            padding: 6px 12px;
+
+            font-family: "Noto Sans KR", sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: .12em;
+
+            color: var(--백-2);
+
+            background: var(--먹);
+
+        }
+
+
+        .작품-단추들 {
+
+            display: flex;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .작품-단추들 .단추 {
+
+            padding: 12px 20px;
+
+            font-size: 11px;
+
+        }
+
+
+        .작품-인장 {
+
+            position: absolute;
+
+            bottom: 20px;
+            left: 20px;
+
+            width: 74px;
+            height: 74px;
+
+            object-fit: contain;
+
+            z-index: 3;
+
+            padding: 10px;
+
+            background: rgba(0,0,0,.6);
+
+            border: 1px solid var(--선);
+
+            backdrop-filter: blur(10px);
+
+            -webkit-backdrop-filter: blur(10px);
+
+            filter: none !important;
+
+        }
+
+
+        .작품:hover .작품-인장 {
+            border-color: var(--적);
+        }
+
+
+        .작품.넓은 .작품-그림 {
+            min-height: 480px;
+        }
+
+
+        /* =====================================================
+           꽃 · HANA
+        ====================================================== */
+
+        .꽃-격자 {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+        }
+
+
+        .꽃-글 h2 {
+
+            font-family: "Black Han Sans", "Song Myung", serif;
+
+            font-size: clamp(3.2rem, 8vw, 8rem);
+
+            line-height: .95;
+
+            font-weight: 400;
+
+            margin-bottom: 24px;
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .꽃-글 h2 .말 {
+            display: block;
+        }
+
+
+        .꽃-글 h2 .말-1 {
+            color: var(--백);
+        }
+
+
+        .꽃-글 h2 .말-2 {
+
+            color: transparent;
+
+            -webkit-text-stroke: 3px var(--적);
+
+            font-style: italic;
+
+            transform: translateX(30px);
+
+        }
+
+
+        .꽃-글 p {
+
+            font-size: 15px;
+
+            line-height: 2;
+
+            color: var(--회);
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .꽃-글 p strong {
+            color: var(--황);
+        }
+
+
+        .꽃-사진 {
+
+            min-height: 520px;
+
+            position: relative;
+
+            border: 1px solid var(--선);
+
+            background: var(--먹-2);
+
+            overflow: hidden;
+
+        }
+
+
+        .꽃-사진::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(201,162,39,.24),
+                    transparent 50%,
+                    rgba(184,38,31,.24)
+                );
+
+            z-index: 1;
+
+            mix-blend-mode: screen;
+
+        }
+
+
+        .꽃-사진 img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            filter: contrast(1.28) saturate(1.15) sepia(.12);
+
+            animation: 붓자욱 11s infinite;
+
+        }
+
+
+        /* =====================================================
+           물음 · PHILOSOPHY
+        ====================================================== */
+
+        .물음 {
+
+            text-align: center;
+
+            padding: 170px 0;
+
+            background: var(--먹);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .물음::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(
+                    circle at 50% 50%,
+                    rgba(184,38,31,.12),
+                    transparent 58%
+                );
+
+            pointer-events: none;
+
+        }
+
+
+        .물음-표지 {
+
+            font-family: "Noto Sans KR", sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: .4em;
+
+            color: var(--적);
+
+            margin-bottom: 44px;
+
+            position: relative;
+
+        }
+
+
+        .물음 h2 {
+
+            max-width: 1120px;
+
+            margin: auto;
+
+            font-family: "Black Han Sans", "Song Myung", serif;
+
+            font-size: clamp(2.6rem, 7vw, 7rem);
+
+            line-height: 1.15;
+
+            font-weight: 400;
+
+            position: relative;
+
+        }
+
+
+        .물음 h2 .줄 {
+            display: block;
+            margin-bottom: 12px;
+        }
+
+
+        .물음 h2 .줄-1 {
+            color: var(--백);
+        }
+
+
+        .물음 h2 .줄-2 {
+
+            color: transparent;
+
+            -webkit-text-stroke: 2px var(--황);
+
+            font-style: italic;
+
+        }
+
+
+        .물음 h2 .줄-3 {
+
+            background: var(--적);
+
+            color: var(--백);
+
+            display: inline-block;
+
+            padding: 0 18px;
+
+            transform: skewX(-8deg);
+
+        }
+
+
+        /* =====================================================
+           발문 · FOOTER
+        ====================================================== */
+
+        footer {
+
+            border-top: 3px double var(--황);
+
+            padding: 64px 0 34px;
+
+            background: var(--먹-2);
+
+            position: relative;
+
+        }
+
+
+        footer::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -3px;
+            left: 0;
+
+            width: 100%;
+            height: 3px;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    var(--적) 0 12px,
+                    transparent 12px 18px
+                );
+
+        }
+
+
+        .발문-격자 {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 40px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 44px;
+
+        }
+
+
+        .발문-브랜드 {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            font-family: "Black Han Sans", serif;
+
+            font-size: 18px;
+
+            letter-spacing: .2em;
+
+            color: var(--백);
+
+        }
+
+
+        .발문-로고 {
+
+            width: 44px;
+            height: 44px;
+
+            object-fit: contain;
+
+            filter: invert(1) sepia(.3) hue-rotate(-15deg);
+
+        }
+
+
+        .발문-부 {
+
+            font-family: "Noto Sans KR", sans-serif;
+
+            font-size: 12px;
+
+            color: var(--회);
+
+            letter-spacing: .14em;
+
+            margin-top: 12px;
+
+        }
+
+
+        .발문-글자 {
+
+            display: flex;
+
+            gap: 26px;
+
+            flex-wrap: wrap;
+
+            font-family: "Noto Sans KR", sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: .18em;
+
+        }
+
+
+        .발문-글자 a {
+
+            color: var(--회);
+
+            text-decoration: none;
+
+            transition: color .2s ease;
+
+        }
+
+
+        .발문-글자 a:hover {
+            color: var(--황);
+        }
+
+
+        .판권 {
+
+            border-top: 1px solid var(--선-약);
+
+            padding-top: 22px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-family: "Noto Sans KR", sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: .18em;
+
+            color: var(--진);
+
+        }
+
+
+        /* =====================================================
+           반응 · RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 900px) {
+
+            .nav-글자 { display: none; }
+
+            .hero-격자,
+            .론-격자,
+            .꽃-격자,
+            .작품 {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .사역 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .역:nth-child(2n) { border-right: none; }
+
+
+            .hero-그림 { min-height: 420px; }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding: 90px 0 40px;
+            }
+
+
+            .hero-격자 { gap: 30px; }
+
+
+            .hero-글 h1 { font-size: 3.6rem; }
+
+
+            .hero-그림 {
+                min-height: 320px;
+                order: -1;
+            }
+
+
+            .사역 { grid-template-columns: 1fr; }
+
+
+            .역 {
+
+                border-right: none;
+                border-bottom: 1px solid var(--선);
+                min-height: 260px;
+
+            }
+
+
+            .역:nth-last-child(-n+4) {
+                border-bottom: 1px solid var(--선);
+            }
+
+
+            .역:마지막-child { border-bottom: none; }
+
+            .역:last-child { border-bottom: none; }
+
+
+            .발문-격자,
+            .판권 {
+
+                flex-direction: column;
+
+            }
+
+
+            .발문-글자 { flex-wrap: wrap; }
+
+
+            .작품-인장 {
+
+                width: 58px;
+                height: 58px;
+                bottom: 14px;
+                left: 14px;
+                padding: 8px;
+
+            }
+
+            .작품-단추들 {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+        }
+
+
+        /* =====================================================
+           접근성 · ACCESSIBILITY
+        ====================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         주사선
+    ====================================================== -->
+
+    <div class="주사선"></div>
+
+
+    <!-- =====================================================
+         단청 띠
+    ====================================================== -->
+
+    <div class="단청-가는"></div>
+
+
+    <!-- =====================================================
+         네비
+    ====================================================== -->
+
+    <nav>
+
+        <a href="#top" class="nav-브랜드">
+
+            <img
+                src="assets/DHA_logo_h.png"
+                alt="하나예술"
+                class="nav-로고"
+            >
+
+            <span>하나예술®</span>
+
+        </a>
+
+
+        <div class="nav-글자">
+
+            <a href="#about">론</a>
+
+            <a href="#domains">사역</a>
+
+            <a href="#work">작품</a>
+
+            <a href="#hana">꽃</a>
+
+            <a
+                href="https://github.com/DigitalHanaArts"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                소스
+            </a>
+
+        </div>
+
+
+        <div class="언어">
+
+            <input
+                type="checkbox"
+                id="언어-토글"
+                class="언어-토글"
+                aria-label="언어 목록 열기"
+            >
+
+            <label for="언어-토글" class="언어-단추">
+                [조선어] ▾
+            </label>
+
+            <div class="언어-목록" role="menu">
+
+                <a href="#" class="언어-항목 활성">[조선어]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha/" class="언어-항목">[English]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha-zh/" class="언어-항목">[中文]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha-per/" class="언어-항목">[فارسی]</a>
+
+                <a href="https://digitalhanaarts.github.io/it_dha/" class="언어-항목">[Italiano]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha_ar/" class="언어-항목">[العربية]</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         본문
+    ====================================================== -->
+
+    <main id="top">
+
+
+        <!-- =================================================
+             첫 화면 · 卷首
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="그릇">
+
+                <div class="hero-격자">
+
+                    <div class="hero-글">
+
+                        <span class="hero-표지">〔 조선화 계산예술 엔진 〕</span>
+
+                        <h1>
+
+                            <span class="말 말-1">디지탈</span>
+
+                            <span class="말 말-2">하나</span>
+
+                            <span class="말 말-3">예술®</span>
+
+                        </h1>
+
+                        <p>
+
+                            <strong>예술</strong>과 <strong>알고리즘</strong> 사이,
+
+                            <strong>자료</strong>와 <strong>꿈</strong> 사이,
+
+                            <strong>지능</strong>과 <strong>본능</strong> 사이 —
+
+                            하나예술은 먹빛 허공에서 움직인다.
+
+                        </p>
+
+                        <div class="hero-단추들">
+
+                            <a href="#work" class="단추 단추-으뜸">
+                                〔 작품 펼치기 〕
+                            </a>
+
+                            <a
+                                href="https://github.com/DigitalHanaArts"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="단추"
+                            >
+                                〔 소스 ↗ 〕
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-그림">
+
+                        <div class="그림-액자">
+
+                            <div class="카드판"></div>
+
+                            <div class="그림-글자">꽃</div>
+
+                            <div class="그림-표제">DHA · 하나예술 · 하나</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             두루마리
+        ================================================== -->
+
+        <div class="두루마리">
+
+            <div class="두루마리-줄">
+
+                <span>예술</span>
+                <span>자료</span>
+                <span>지능</span>
+                <span>련쇄</span>
+                <span>생성</span>
+                <span>계산</span>
+                <span>시각</span>
+                <span>추상</span>
+                <span>련쇄실험실</span>
+                <span>조선화</span>
+                <span>꽃</span>
+
+                <span>예술</span>
+                <span>자료</span>
+                <span>지능</span>
+                <span>련쇄</span>
+                <span>생성</span>
+                <span>계산</span>
+                <span>시각</span>
+                <span>추상</span>
+                <span>련쇄실험실</span>
+                <span>조선화</span>
+                <span>꽃</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             론 · 論
+        ================================================== -->
+
+        <section id="about">
+
+            <div class="그릇">
+
+                <div class="론-격자">
+
+                    <div class="론-그림"></div>
+
+
+                    <div class="론-글">
+
+                        <span class="마디-표지">〔 壹 · 론 〕</span>
+
+                        <h2>
+
+                            기술은 곧
+
+                            <span class="뜬금">매재(媒材).</span>
+
+                        </h2>
+
+                        <p>
+
+                            하나예술은 기술과 예술표현 사이의
+
+                            <strong>간성(間性) 공간</strong>을 걷는
+
+                            실험적 계산창조력 작업실이다.
+
+                        </p>
+
+                        <p>
+
+                            우리는 소프트웨어, 시각체계, 기계학습 실험,
+
+                            자료기반 창작, 그리고 련쇄지향 수자자산을
+
+                            구축한다 — 모든 것은
+
+                            <strong>후인간적 감성</strong>을 깔고 있다.
+
+                        </p>
+
+                        <p>
+
+                            우리의 근본 물음은 간단하지 않다:
+
+                            <strong>계산이 창작매재가 될 때,
+
+                            무엇이 일어나는가?</strong>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             사역 · 四域
+        ================================================== -->
+
+        <section id="domains">
+
+            <div class="그릇">
+
+                <span class="마디-표지">〔 貳 · 사역 〕</span>
+
+                <h2 class="마디-제목">
+
+                    네 사역,
+
+                    <span class="은은">한 체계.</span>
+
+                    <span class="긋기">경계 없음.</span>
+
+                </h2>
+
+                <p class="마디-머리">
+
+                    하나예술은 단일한 기술 범주에 머무르지 않고
+
+                    학문을 가로질러 움직인다.
+
+                    이것이 해체된 격자이다.
+
+                </p>
+
+
+                <div class="사역">
+
+
+                    <article class="역" data-수="壹">
+
+                        <div class="역-부호">◇</div>
+
+                        <h3>수자예술</h3>
+
+                        <p>
+                            생성체계, 알고리즘 예술,
+                            계산사진, 실험적 수자매재.
+                        </p>
+
+                    </article>
+
+
+                    <article class="역" data-수="貳">
+
+                        <div class="역-부호">◌</div>
+
+                        <h3>자료과학</h3>
+
+                        <p>
+                            자료채굴, 분석, 시각화,
+                            통계계산, 자료기반 발견.
+                        </p>
+
+                    </article>
+
+
+                    <article class="역" data-수="參">
+
+                        <div class="역-부호">◎</div>
+
+                        <h3>지능</h3>
+
+                        <p>
+                            기계학습, 심층학습,
+                            콤퓨터시각, 생성적 인공지능.
+                        </p>
+
+                    </article>
+
+
+                    <article class="역" data-수="肆">
+
+                        <div class="역-부호">⛓</div>
+
+                        <h3>련쇄</h3>
+
+                        <p>
+                            NFT, 수자자산, 련쇄분석,
+                            탈중심 창작생태.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             작품 · 作品
+        ================================================== -->
+
+        <section id="work">
+
+            <div class="그릇">
+
+                <span class="마디-표지">〔 參 · 작품 〕</span>
+
+                <h2 class="마디-제목">
+
+                    <span class="은은">화소</span>로부터
+
+                    <span class="긋기">지능</span>으로.
+
+                </h2>
+
+
+                <!-- =========================================
+                     련쇄실험실 · MLabChain
+                ========================================== -->
+                <div class="작품 넓은">
+
+                    <div class="작품-그림">
+
+                        <img
+                            src="assets/MLabChain_v3_Banner.png"
+                            alt="련쇄실험실 · MLabChain — 블록체인 연구플래트홈"
+                            loading="lazy"
+                        >
+
+                        <img
+                            src="assets/mlabchain.png"
+                            alt="MLabChain 인장"
+                            class="작품-인장"
+                        >
+
+                    </div>
+
+                    <div class="작품-설명">
+
+                        <span class="작품-꼬리표">〔 련쇄 의정 〕</span>
+
+                        <h3>련쇄<br>실험실</h3>
+
+                        <p>
+                            실험실과학과 탈중심 기반구조,
+                            그리고 검증가능한 계산을
+                            하나로 잇는 블록체인 연구·공학
+                            플래트홈.
+                        </p>
+
+                        <div class="기술">
+
+                            <span>블록체인</span>
+                            <span>분산</span>
+                            <span>Web3</span>
+                            <span>고에네르기물리</span>
+                            <span>연구</span>
+
+                        </div>
+
+                        <div class="작품-단추들">
+
+                            <a
+                                href="https://github.com/DigitalHanaArts/MLabChain"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="단추 단추-으뜸"
+                            >
+                                〔 GitHub ↗ 〕
+                            </a>
+
+                            <a
+                                href="https://gitlab.cern.ch/abavarch/labchain"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="단추"
+                            >
+                                〔 GitLab ↗ 〕
+                            </a>
+
+                            <a
+                                href="https://digitalhanaarts.github.io/mlc/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="단추"
+                            >
+                                〔 웹페지 ↗ 〕
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DHA 시각 -->
+                <div class="작품">
+
+                    <div class="작품-그림">
+
+                        <img
+                            src="assets/DHA_Vision.png"
+                            alt="DHA 시각"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="작품-설명">
+
+                        <span class="작품-꼬리표">〔 실험 플래트홈 〕</span>
+
+                        <h3>DHA<br>시각</h3>
+
+                        <p>
+                            Julia로 구축한 계산예술 플래트홈.
+
+                            사진이 이미지처리, 기계학습,
+
+                            생성체계를 거쳐 새로운 수자예술로
+
+                            변모하는 과정을 탐구한다.
+                        </p>
+
+                        <div class="기술">
+
+                            <span>Julia</span>
+                            <span>Flux</span>
+                            <span>기계학습</span>
+                            <span>이미지처리</span>
+                            <span>생성예술</span>
+
+                        </div>
+
+                        <a
+                            href="https://github.com/DigitalHanaArts/DHA-Vision"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="단추"
+                        >
+                            〔 작품 보기 ↗ 〕
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OpenSea 수집 -->
+                <div class="작품">
+
+                    <div class="작품-그림">
+
+                        <img
+                            src="assets/opensea.io.jpeg"
+                            alt="OpenSea 수집"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="작품-설명">
+
+                        <span class="작품-꼬리표">〔 NFT 수집 〕</span>
+
+                        <h3>OpenSea<br>수집</h3>
+
+                        <p>
+                            OpenSea에서 하나예술의 공식 수집을
+
+                            펼쳐보라 — 수자자산, 생성예술,
+
+                            그리고 련쇄기반 창작의 정선.
+                        </p>
+
+                        <div class="기술">
+
+                            <span>NFT</span>
+                            <span>Ethereum</span>
+                            <span>수자예술</span>
+                            <span>블록체인</span>
+                            <span>OpenSea</span>
+
+                        </div>
+
+                        <a
+                            href="https://opensea.io/Digital__Hana__Arts"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="단추"
+                        >
+                            〔 OpenSea 방문 ↗ 〕
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             꽃 · HANA
+        ================================================== -->
+
+        <section id="hana">
+
+            <div class="그릇">
+
+                <div class="꽃-격자">
+
+                    <div class="꽃-글">
+
+                        <span class="마디-표지">〔 肆 · 근원 〕</span>
+
+                        <h2>
+
+                            <span class="말 말-1">만나다,</span>
+
+                            <span class="말 말-2">꽃.</span>
+
+                        </h2>
+
+                        <p>
+                            하나예술은 「꽃」의 이름을 띤다 —
+                            시각정체성의 중심에 자리한
+                            한 마리 고양이.
+                        </p>
+
+                        <p>
+                            그의 존재는 계산의 세계에
+                            의도적으로 유기적인 인간성을 불어넣는다:
+
+                            <strong>호기심, 개성, 품격.</strong>
+
+                        </p>
+
+                    </div>
+
+                    <div class="꽃-사진">
+
+                        <img
+                            src="assets/Hana_the_kitten.jpeg"
+                            alt="꽃 · 고양이"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             물음 · 問
+        ================================================== -->
+
+        <section class="물음">
+
+            <div class="그릇">
+
+                <span class="물음-표지">〔 伍 · 물음 〕</span>
+
+                <h2>
+
+                    <span class="줄 줄-1">계산이</span>
+
+                    <span class="줄 줄-2">창작매재가</span>
+
+                    <span class="줄 줄-3">될 때, 무엇이 일어나는가?</span>
+
+                </h2>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         발문 · 跋文
+    ====================================================== -->
+
+    <footer>
+
+        <div class="그릇">
+
+            <div class="발문-격자">
+
+                <div>
+
+                    <div class="발문-브랜드">
+
+                        <img
+                            src="assets/DHA_logo.png"
+                            alt="하나예술"
+                            class="발문-로고"
+                        >
+
+                        <span>하나예술®</span>
+
+                    </div>
+
+                    <div class="발문-부">
+                        예술 × 자료 × 지능 × 련쇄
+                    </div>
+
+                </div>
+
+                <div class="발문-글자">
+
+                    <a
+                        href="https://github.com/DigitalHanaArts"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        〔 소스 〕
+                    </a>
+
+                    <a href="#top">〔 처음으로 ↑ 〕</a>
+
+                </div>
+
+            </div>
+
+            <div class="판권">
+
+                <span>© 2026 하나예술®</span>
+
+                <span>계산은 창작의 매재</span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
